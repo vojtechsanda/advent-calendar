@@ -1,0 +1,45 @@
+.dash {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid $color__red--light-2;
+
+    
+    &--can-be-opened {
+        cursor: pointer;
+    }
+    
+    &--is-opened {
+        border: none;
+        cursor: default;
+    }
+    
+    &--can-be-opened:not(.dash--is-opened) {
+        transition: background .15s;
+
+        &:hover {
+            // The !important is for rewriting the inline background from JS
+            background: $color__red--light-3!important;
+        }
+    }
+
+    &--is-opened > &__text {
+        display: none;
+    }
+
+    &__text {
+        user-select: none;
+        font-family: $font__fancy;
+        color: $color__yellow;
+        font-weight: 700;
+        font-size: 50px;
+
+        @include responsive($breakpoint__mobile) {
+            font-size: 30px;
+        }
+
+        @include responsive($breakpoint__mobile--small) {
+            font-size: 24px;
+        }
+    }
+}

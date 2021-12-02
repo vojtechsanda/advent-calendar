@@ -1,0 +1,21 @@
+@mixin responsive($breakpoint) {
+    @media screen and (max-width: $breakpoint) {
+        @content;
+    }
+}
+
+@mixin main-heading {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 70px;
+    font-family: $font__fancy;
+    color: $color__yellow;
+
+    @include responsive($breakpoint__mobile) {
+        font-size: 50px;
+    }
+
+    @include responsive($breakpoint__mobile--small) {
+        font-size: 40px;
+    }
+}

@@ -1,0 +1,4 @@
+/* Team */
+    Creator: Vojtech Sanda
+    Contact: vojtech@vojtechsanda.cz
+    Website: https://vojtechsanda.cz

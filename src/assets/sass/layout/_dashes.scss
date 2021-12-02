@@ -1,0 +1,43 @@
+.dashes {
+    display: grid;
+    grid-template-columns: repeat(4, 216px);
+    grid-template-rows: repeat(6, 192px);
+    border: 5px solid $color__red--dark-2;
+    position: relative;
+    
+    @include responsive($breakpoint__laptop) {
+        grid-template-columns: repeat(4, 162px);
+        grid-template-rows: repeat(6, 144px);
+    }
+
+    @include responsive($breakpoint__tablet) {
+        grid-template-columns: repeat(4, 108px);
+        grid-template-rows: repeat(6, 96px);
+    }
+
+    @include responsive($breakpoint__mobile) {
+        grid-template-columns: repeat(4, 81px);
+        grid-template-rows: repeat(6, 72px);
+    }
+
+
+    @include responsive($breakpoint__mobile--small) {
+        grid-template-columns: repeat(4, 64.8px);
+        grid-template-rows: repeat(6, 57.6px);
+    }
+
+    &__heading {
+        @include main-heading;
+    }
+
+    &__hat {
+        position: absolute;
+        top: -50px;
+        right: -60px;
+        transform: rotate(30deg) scale(0.5);
+
+        @include responsive($breakpoint__mobile) {
+            transform: rotate(30deg) scale(0.4);
+        }
+    }
+}

@@ -1,0 +1,15 @@
+$color__red: #bb2528;
+$color__red--dark-1: darken($color__red, 10);
+$color__red--dark-2: darken($color__red, 5);
+$color__red--light-1: #c33837;
+$color__red--light-2: lighten($color__red, 5);
+$color__red--light-3: lighten($color__red, 2);
+$color__yellow: #F8B229;
+
+$breakpoint__laptop: 60.625em;          // 970px
+$breakpoint__tablet: 48em;              // 768px
+$breakpoint__mobile: 33.125em;          // 530px
+$breakpoint__mobile--small: 25em;       // 400px
+
+$font__basic: 'Rubik', sans-serif;
+$font__fancy: 'Dancing Script', cursive;
